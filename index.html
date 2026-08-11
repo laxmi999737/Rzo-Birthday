@@ -37,10 +37,10 @@
     .aurora-bg {
       background-color: #0f051d;
       background-image: 
-        radial-gradient(at 10% 10%, rgba(244, 114, 182, 0.45) 0px, transparent 50%), /* Soft Rose Pink */
-        radial-gradient(at 90% 15%, rgba(192, 132, 252, 0.4) 0px, transparent 50%), /* Pastel Lavender */
-        radial-gradient(at 80% 85%, rgba(251, 146, 60, 0.3) 0px, transparent 50%),  /* Soft Peach/Gold */
-        radial-gradient(at 20% 80%, rgba(236, 72, 153, 0.35) 0px, transparent 50%); /* Bright Magenta Glow */
+        radial-gradient(at 10% 10%, rgba(244, 114, 182, 0.45) 0px, transparent 50%),
+        radial-gradient(at 90% 15%, rgba(192, 132, 252, 0.4) 0px, transparent 50%),
+        radial-gradient(at 80% 85%, rgba(251, 146, 60, 0.3) 0px, transparent 50%),
+        radial-gradient(at 20% 80%, rgba(236, 72, 153, 0.35) 0px, transparent 50%);
       background-size: 180% 180%;
       animation: auroraMove 15s ease infinite alternate;
     }
@@ -182,15 +182,16 @@
       </button>
     </section>
 
-    <!-- STEP 4: Shared Memory (Interactive Polaroid) -->
+    <!-- STEP 4: Shared Memory (Updated Polaroid with New Generated Image) -->
     <section id="step-4" class="step-card glass-card rounded-3xl p-6 md:p-8 text-center flex flex-col items-center gap-6 hidden">
       <h2 class="girly-heading text-4xl md:text-5xl text-gradient">That One Time...</h2>
       
       <!-- Polaroid Container -->
       <div class="polaroid-wrapper py-2" id="polaroid-wrapper">
-        <div id="polaroid" class="polaroid-card bg-white p-3 pt-3 pb-6 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.6)] rotate-[-3deg] max-w-[260px] mx-auto text-slate-800">
-          <div class="aspect-square bg-slate-900 overflow-hidden rounded-sm mb-3 flex items-center justify-center relative">
-            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0iIzI2MTAzNSIvPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE1MCIgcj0iODUiIGZpbGw9IiNmYmNmZTgiLz48cGF0aCBkPSJNMTQwLDI0MCBRMjAwLDI5MCAyNjAsMjQwIEwzMDAsNDAwIEwxMDAsNDAwIFoiIGZpbGw9IiM3ZTIyY2UiLz48cGF0aCBkPSJNMTYwLDIxMCBDMTYwLDE4MCAyMDAsMTYwIDIwMCwxOTAgQzIwMCwxNjAgMjQwLDE4MCAyNDAsMjEwIEMyNDAsMjQwIDIwMCwyNzAgMjAwLDI3MCBDMjAwLDI3MCAxNjAsMjQwIDE2MCwyMTAgWiIgZmlsbD0iI2VjNDg5OSIvPjx0ZXh0IHg9IjUwJSIgeT0iNjUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1zaXplPSIyMiIgZmlsbD0iI2ZiY2ZlOCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SEFQUFkgQklSVEhEQVkhITwvdGV4dD48L3N2Zz4=" alt="Our Favorite Memory" class="w-full h-full object-cover pointer-events-none" />
+        <div id="polaroid" class="polaroid-card bg-white p-3 pt-3 pb-5 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.6)] rotate-[-3deg] max-w-[260px] mx-auto text-slate-800">
+          <div class="aspect-square overflow-hidden rounded-sm mb-3 relative shadow-inner bg-slate-100 flex items-center justify-center">
+            <!-- NEW GENERATED ANIME HUG IMAGE (Direct Link) -->
+            <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,quality=70,width=500,height=500/editor-images/2024-03/ff6a2468-f99a-4f51-b8f4-6cbfe1f9984d" alt="Anime Birthday Hug" class="w-full h-full object-cover object-center" />
           </div>
           <p class="girly-heading text-2xl text-pink-900 font-normal">Our favorite memory.</p>
         </div>
@@ -205,21 +206,52 @@
       </button>
     </section>
 
-    <!-- STEP 5: Birthday Wish & Grand Finale -->
-    <section id="step-5" class="step-card glass-card rounded-3xl p-8 md:p-10 text-center flex flex-col items-center gap-6 hidden">
-      <div class="text-6xl md:text-7xl my-2 pulse-glow">🎂</div>
-      <h2 class="girly-heading text-5xl md:text-6xl text-gradient">My Wish For You</h2>
-      <p class="text-pink-100 text-base md:text-lg leading-relaxed max-w-md font-medium opacity-90">
-        May the next year bring you all the love, success, and pure happiness you so rightfully deserve. May your dreams soar higher than ever, Diya!
-      </p>
+    <!-- STEP 5: MAGICAL GRAND FINALE -->
+    <section id="step-5" class="step-card glass-card rounded-3xl p-6 md:p-10 text-center flex flex-col items-center gap-6 hidden">
+      
+      <!-- Envelope Icon before opening -->
+      <div id="envelope-wrapper" class="cursor-pointer my-2 pulse-glow transition-transform hover:scale-110" onclick="triggerFinale()">
+        <div class="text-7xl md:text-8xl">💌</div>
+        <p class="text-pink-300 text-xs uppercase tracking-widest font-semibold mt-2 animate-pulse">Tap to open your letter</p>
+      </div>
 
-      <!-- Final Animated Text Placeholder -->
-      <div id="final-message" class="hidden girly-heading text-4xl md:text-5xl text-pink-200 my-2 drop-shadow-[0_0_20px_rgba(244,114,182,1)]">
-        Happy Birthday, my bestie Diya! ❤️
+      <!-- Secret Letter (Appears on click) -->
+      <div id="letter-content" class="hidden flex flex-col items-center gap-5 w-full">
+        <div class="text-5xl md:text-6xl animate-bounce">👑✨</div>
+        <h2 class="girly-heading text-5xl md:text-6xl text-gradient">To My Dearest Diya,</h2>
+        
+        <p class="text-pink-100 text-base md:text-lg leading-relaxed max-w-md font-medium opacity-95">
+          Thank you for being the most incredible best friend anyone could ever ask for. You make hard days easier, good days brighter, and life so much sweeter. 💖
+        </p>
+
+        <!-- Cute 3 Badges / Wish Grid -->
+        <div class="grid grid-cols-3 gap-2 md:gap-3 w-full my-2">
+          <div class="glass-pill p-3 rounded-xl border border-pink-300/30 text-center">
+            <span class="text-xl">🌸</span>
+            <p class="text-xs text-pink-200 font-semibold mt-1">Always Shine</p>
+          </div>
+          <div class="glass-pill p-3 rounded-xl border border-pink-300/30 text-center">
+            <span class="text-xl">🦋</span>
+            <p class="text-xs text-pink-200 font-semibold mt-1">Fly High</p>
+          </div>
+          <div class="glass-pill p-3 rounded-xl border border-pink-300/30 text-center">
+            <span class="text-xl">♾️</span>
+            <p class="text-xs text-pink-200 font-semibold mt-1">Besties Forever</p>
+          </div>
+        </div>
+
+        <p class="text-pink-200 italic text-sm md:text-base font-normal">
+          "May your year be as gorgeous, magical, and unforgettable as you are!"
+        </p>
+
+        <!-- Final Grand Heading -->
+        <div class="girly-heading text-5xl md:text-6xl text-pink-200 my-1 drop-shadow-[0_0_25px_rgba(244,114,182,1)]">
+          Happy Birthday, Bestie! 🎉🎂
+        </div>
       </div>
 
       <button id="celebrate-btn" onclick="triggerFinale()" class="btn-gradient px-10 py-4 rounded-full font-bold text-white text-lg tracking-wider mt-2">
-        Celebrate!
+        Open Special Wish ✨
       </button>
     </section>
 
@@ -231,6 +263,18 @@
     let isFinaleTriggered = false;
     let currentStep = 1;
     const totalSteps = 5;
+
+    /* AUDIO SOUND EFFECTS */
+    const clickAudio = new Audio('https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3');
+    const wooshAudio = new Audio('https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3');
+    const chimeAudio = new Audio('https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3');
+
+    function playSound(audio) {
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play().catch(() => {});
+      }
+    }
 
     function initApp() {
       initThreeJS();
@@ -275,12 +319,11 @@
       const geometry = new THREE.ExtrudeGeometry(heartShape, extrudeSettings);
       geometry.center();
 
-      /* Soft Pastel Colors for 3D Hearts */
       const materials = [
-        new THREE.MeshPhongMaterial({ color: 0xf472b6, shininess: 90 }), // Rose Pink
-        new THREE.MeshPhongMaterial({ color: 0xc084fc, shininess: 85 }), // Lavender Purple
-        new THREE.MeshPhongMaterial({ color: 0xfb7185, shininess: 100 }),// Soft Red Pink
-        new THREE.MeshPhongMaterial({ color: 0xfbcfe8, shininess: 70 })  // Light Pastel Pink
+        new THREE.MeshPhongMaterial({ color: 0xf472b6, shininess: 90 }),
+        new THREE.MeshPhongMaterial({ color: 0xc084fc, shininess: 85 }),
+        new THREE.MeshPhongMaterial({ color: 0xfb7185, shininess: 100 }),
+        new THREE.MeshPhongMaterial({ color: 0xfbcfe8, shininess: 70 })
       ];
 
       heartsGroup = new THREE.Group();
@@ -341,9 +384,11 @@
       }
     }
 
-    /* STEP NAVIGATION SYSTEM */
+    /* STEP NAVIGATION SYSTEM WITH SOUND */
     function nextStep(targetStep) {
       if (targetStep <= currentStep || targetStep > totalSteps) return;
+
+      playSound(clickAudio);
 
       const currentEl = document.getElementById(`step-${currentStep}`);
       const nextEl = document.getElementById(`step-${targetStep}`);
@@ -372,12 +417,16 @@
       document.getElementById('progress-bar').style.width = `${progressPercent}%`;
     }
 
-    /* POLAROID TILT INTERACTION */
+    /* POLAROID TILT INTERACTION WITH SOUND */
     function initPolaroid() {
       const polaroidWrapper = document.getElementById('polaroid-wrapper');
       const polaroid = document.getElementById('polaroid');
 
       if (polaroidWrapper && polaroid) {
+        polaroidWrapper.addEventListener('mouseenter', () => {
+          playSound(wooshAudio);
+        });
+
         polaroidWrapper.addEventListener('mousemove', (e) => {
           const rect = polaroidWrapper.getBoundingClientRect();
           const x = e.clientX - rect.left - rect.width / 2;
@@ -393,40 +442,60 @@
       }
     }
 
-    /* GRAND FINALE SEQUENCE WITH PASTEL CONFETTI */
+    /* ENHANCED GRAND FINALE SEQUENCE WITH SOUND */
     function triggerFinale() {
+      if(isFinaleTriggered) return;
+      isFinaleTriggered = true;
+
+      playSound(chimeAudio);
+
       const btn = document.getElementById('celebrate-btn');
-      const finalMsg = document.getElementById('final-message');
+      const envelope = document.getElementById('envelope-wrapper');
+      const letterContent = document.getElementById('letter-content');
 
       if (btn) btn.style.display = 'none';
-      if (finalMsg) {
-        finalMsg.classList.remove('hidden');
-        if (typeof gsap !== 'undefined') {
-          gsap.fromTo(finalMsg, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.6 });
-        }
+      
+      if (envelope && typeof gsap !== 'undefined') {
+        gsap.to(envelope, {
+          scale: 0,
+          opacity: 0,
+          duration: 0.4,
+          onComplete: () => {
+            envelope.style.display = 'none';
+            letterContent.classList.remove('hidden');
+            gsap.fromTo(letterContent, 
+              { opacity: 0, scale: 0.8, y: 20 }, 
+              { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "back.out(1.7)" }
+            );
+          }
+        });
+      } else if (letterContent) {
+        if (envelope) envelope.style.display = 'none';
+        letterContent.classList.remove('hidden');
       }
 
+      /* Magical Confetti Explosion */
       if (typeof confetti !== 'undefined') {
-        const duration = 5 * 1000;
+        const duration = 6 * 1000;
         const animationEnd = Date.now() + duration;
-        const defaults = { startVelocity: 30, spread: 360, ticks: 120, zIndex: 100 };
+        const defaults = { startVelocity: 35, spread: 360, ticks: 150, zIndex: 100 };
 
         const interval = setInterval(() => {
           const timeLeft = animationEnd - Date.now();
           if (timeLeft <= 0) return clearInterval(interval);
 
-          const particleCount = 50 * (timeLeft / duration);
-          confetti({ ...defaults, particleCount, origin: { x: 0.2, y: 0.5 }, colors: ['#f472b6', '#c084fc', '#fb7185', '#ffffff', '#fbcfe8'] });
-          confetti({ ...defaults, particleCount, origin: { x: 0.8, y: 0.5 }, colors: ['#f472b6', '#c084fc', '#fb7185', '#ffffff', '#fbcfe8'] });
-        }, 250);
+          const particleCount = 60 * (timeLeft / duration);
+          confetti({ ...defaults, particleCount, origin: { x: 0.2, y: 0.5 }, colors: ['#f472b6', '#c084fc', '#fb7185', '#ffffff', '#ffd1dc'] });
+          confetti({ ...defaults, particleCount, origin: { x: 0.8, y: 0.5 }, colors: ['#f472b6', '#c084fc', '#fb7185', '#ffffff', '#ffd1dc'] });
+        }, 200);
       }
 
-      isFinaleTriggered = true;
+      /* Floating Hearts Dispersion */
       hearts.forEach((heart) => {
         if (typeof gsap !== 'undefined') {
           gsap.to(heart.position, {
-            y: 40,
-            duration: 3 + Math.random() * 2,
+            y: 45,
+            duration: 2.5 + Math.random() * 2,
             ease: "power2.in"
           });
           gsap.to(heart.material, { opacity: 0, transparent: true, duration: 2 });
